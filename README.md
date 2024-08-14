@@ -20,7 +20,7 @@ Add the following dependency to your `Package.swift` file to use the **AUnit** p
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/RapboyGao/Unit.git", from: "1.0.0")
+    .package(url: "https://github.com/RapboyGao/AUnit.git", from: "1.0.0")
 ]
 ```
 
@@ -319,7 +319,7 @@ With **AUnit**, you can perform precise unit conversions and conduct complex ari
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/RapboyGao/Unit.git", from: "1.0.0")
+    .package(url: "https://github.com/RapboyGao/AUnit.git", from: "1.0.0")
 ]
 ```
 
@@ -609,7 +609,7 @@ if let kilohertz = megahertz.converted(to: .kilohertz) {
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/RapboyGao/Unit.git", from: "1.0.0")
+    .package(url: "https://github.com/RapboyGao/AUnit.git", from: "1.0.0")
 ]
 ```
 
@@ -908,7 +908,7 @@ Ajoutez la dépendance suivante dans votre fichier `Package.swift` pour utiliser
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/RapboyGao/Unit.git", from: "1.0.0")
+    .package(url: "https://github.com/RapboyGao/AUnit.git", from: "1.0.0")
 ]
 ```
 
@@ -1207,7 +1207,7 @@ Avec **AUnit**, vous pouvez effectuer des conversions d'unités précises et eff
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/RapboyGao/Unit.git", from: "1.0.0")
+    .package(url: "https://github.com/RapboyGao/AUnit.git", from: "1.0.0")
 ]
 ```
 
@@ -1508,7 +1508,7 @@ if let kilohertz = megahertz.converted(to: .kilohertz) {
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/RapboyGao/Unit.git", from: "1.0.0")
+    .package(url: "https://github.com/RapboyGao/AUnit.git", from: "1.0.0")
 ]
 ```
 
@@ -1807,7 +1807,7 @@ Adicione a seguinte dependência ao seu arquivo `Package.swift` para usar o paco
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/RapboyGao/Unit.git", from: "1.0.0")
+    .package(url: "https://github.com/RapboyGao/AUnit.git", from: "1.0.0")
 ]
 ```
 
@@ -2106,7 +2106,7 @@ Agregue la siguiente dependencia a su archivo `Package.swift` para usar el paque
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/RapboyGao/Unit.git", from: "1.0.0")
+    .package(url: "https://github.com/RapboyGao/AUnit.git", from: "1.0.0")
 ]
 ```
 
@@ -2405,7 +2405,7 @@ Con **AUnit**, puede realizar conversiones precisas de unidades y realizar opera
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/RapboyGao/Unit.git", from: "1.0.0")
+    .package(url: "https://github.com/RapboyGao/AUnit.git", from: "1.0.0")
 ]
 ```
 
@@ -2708,7 +2708,7 @@ Fügen Sie das Paket in Ihrem `Package.swift` hinzu:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/RapboyGao/Unit.git", from: "1.0.0"),
+    .package(url: "https://github.com/RapboyGao/AUnit.git", from: "1.0.0"),
 ]
 ```
 
