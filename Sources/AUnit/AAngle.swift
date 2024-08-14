@@ -1,4 +1,5 @@
 import Foundation
+import SwiftUI
 
 /// Constant value for Pi (π)
 private let pi = 3.14159265358979323846264338327950288419716939937510
@@ -194,5 +195,17 @@ public extension AAngle {
     init(integerLiteral value: Int) {
         self.value = Double(value)
         self.unit = .degrees
+    }
+
+    @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+    func toAngle() -> Angle {
+        switch unit {
+        case .degrees:
+            return .degrees(value)
+        case .radians:
+            return .radians(value)
+        case .arcMinutes, .arcSeconds, .gradians, .revolutions:
+            return .radians(radians)
+        }
     }
 }
