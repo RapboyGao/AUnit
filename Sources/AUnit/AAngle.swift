@@ -197,6 +197,10 @@ public extension AAngle {
         self.unit = .degrees
     }
 
+    func isNormalOrZero() -> Bool {
+        return value.isNormal || value.isZero
+    }
+
     @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
     func toAngle() -> Angle {
         switch unit {
