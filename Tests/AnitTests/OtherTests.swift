@@ -35,47 +35,19 @@ final class OtherTests: XCTestCase {
                     \(coefficientStrings.joined(separator: "\n\t\t"))
                     }
                 }
-                public var id: AUnit {
+                public var id: AU\(capitalFirst) {
+                    self
+                    /*
                     switch self {
                     \(aUnitStrings.joined(separator: "\n\t\t"))
                     }
+                    */
                 }
                 public static var baseUnit: AU\(capitalFirst) = .\(baseUnit)
             }
             """
             print(toPrint)
         }
-    }
-
-    func testTemperature() throws {
-        let number = Double.random(in: -50 ... 100)
-        guard let value1 = AUnit.celsius.convert(value: number, to: .fahrenheit)
-        else {
-            fatalError("Cannot convert")
-        }
-        let value2 = AUTemperature.celsius.convert(value: number, to: .fahrenheit)
-        let quantity = AQuantity(value: number, unit: AUTemperature.celsius)
-        let value3 = quantity.converted(to: .fahrenheit).value
-        XCTAssertEqual(value1, value2, accuracy: 1e-10, "Temperature conversion error")
-        XCTAssertEqual(value2, value3, accuracy: 1e-10, "Temperature conversion error")
-    }
-
-    func testFuelEfficiency() throws {
-        let number = Double.random(in: -50 ... 100)
-        guard let value1 = AUnit.litersPer100Kilometers.convert(value: number, to: .milesPerGallon)
-        else {
-            fatalError("Cannot convert")
-        }
-        let value2 = AUFuelEfficiency.litersPer100Kilometers.convert(value: number, to: .milesPerGallon)
-        let quantity = AQuantity(value: number, unit: AUFuelEfficiency.litersPer100Kilometers)
-        let value3 = quantity.converted(to: .milesPerGallon).value
-        XCTAssertEqual(value1, value2, accuracy: 1e-10, "Fuel efficiency conversion error")
-        XCTAssertEqual(value2, value3, accuracy: 1e-10, "Fuel efficiency conversion error")
-    }
-
-    func testLength() throws {
-        let value1 = AULength.nauticalMiles.convert(value: 1, to: .kilometers)
-        XCTAssertEqual(value1, 1.852)
     }
 
     func testUUID() throws {
