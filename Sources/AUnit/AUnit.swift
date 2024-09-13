@@ -8,7 +8,7 @@ public enum AUnit: Codable, Sendable, Hashable, CaseIterable, Identifiable {
     // Speed
     case knots, metersPerSecond, feetPerMinute, kilometersPerHour, feetPerSecond, milesPerHour, inchesPerSecond, yardsPerSecond
     // Pressure
-    case hectopascals, inchesOfMercury, millimetersOfMercury, newtonsPerMetersSquared, gigapascals, megapascals, kilopascals, bars, millibars, poundsForcePerSquareInch
+    case hectopascals, inchesOfMercury, millimetersOfMercury, newtonsPerMetersSquared, gigapascals, megapascals, kilopascals, bars, millibars, poundsForcePerSquareInch, atmospheres
     // Temperature
     case kelvin, celsius, fahrenheit, rankine
     // TemperatureDifference
@@ -56,7 +56,7 @@ public enum AUnit: Codable, Sendable, Hashable, CaseIterable, Identifiable {
             return .length
         case .feetPerSecond, .knots, .kilometersPerHour, .metersPerSecond, .milesPerHour, .feetPerMinute, .inchesPerSecond, .yardsPerSecond:
             return .speed
-        case .hectopascals, .inchesOfMercury, .millimetersOfMercury, .newtonsPerMetersSquared, .gigapascals, .megapascals, .kilopascals, .bars, .millibars, .poundsForcePerSquareInch:
+        case .hectopascals, .inchesOfMercury, .millimetersOfMercury, .newtonsPerMetersSquared, .gigapascals, .megapascals, .kilopascals, .bars, .millibars, .poundsForcePerSquareInch, .atmospheres:
             return .pressure
         case .celsius, .fahrenheit, .kelvin, .rankine:
             return .temperature
@@ -148,6 +148,7 @@ public enum AUnit: Codable, Sendable, Hashable, CaseIterable, Identifiable {
         case .bars: return 1.0e5
         case .millibars: return 100.0
         case .poundsForcePerSquareInch: return 6894.757
+        case .atmospheres: return 101325.0  // 1 atm = 101325 Pa
         // Temperature
         case .kelvin, .celsius, .celsiusDelta: return 1.0
         case .fahrenheit, .rankine, .fahrenheitDelta: return 5.0 / 9.0
