@@ -7,3 +7,5 @@
 - Unit。detailedIntroduction 写一下该单位的用处和该单位相对于其他单位的大小
 - 如果 symbol 太长，可以用英文符号
 - 放在哪个文件夹？
+
+- de en es fr it ja ko pt ru th zh-Hans zh-Hant
