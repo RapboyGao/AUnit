@@ -6,7 +6,7 @@
 
 選擇您偏好的文檔語言：
 
-- [🇬🇧 English](./README.en.md)
+- [🇬🇧 English](./README.md)
 - [🇩🇪 Deutsch](./README.de.md)
 - [🇪🇸 Español](./README.es.md)
 - [🇫🇷 Français](./README.fr.md)

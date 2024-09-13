@@ -6,7 +6,7 @@
 
 원하는 언어로 문서를 확인하세요:
 
-- [🇬🇧 English](./README.en.md)
+- [🇬🇧 English](./README.md)
 - [🇩🇪 Deutsch](./README.de.md)
 - [🇪🇸 Español](./README.es.md)
 - [🇫🇷 Français](./README.fr.md)

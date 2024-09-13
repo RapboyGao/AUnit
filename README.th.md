@@ -6,7 +6,7 @@
 
 เลือกภาษาที่คุณต้องการสำหรับเอกสาร:
 
-- [🇬🇧 English](./README.en.md)
+- [🇬🇧 English](./README.md)
 - [🇩🇪 Deutsch](./README.de.md)
 - [🇪🇸 Español](./README.es.md)
 - [🇫🇷 Français](./README.fr.md)
