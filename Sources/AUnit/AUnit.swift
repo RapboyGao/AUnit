@@ -148,7 +148,7 @@ public enum AUnit: Codable, Sendable, Hashable, CaseIterable, Identifiable {
         case .bars: return 1.0e5
         case .millibars: return 100.0
         case .poundsForcePerSquareInch: return 6894.757
-        case .atmospheres: return 101325.0  // 1 atm = 101325 Pa
+        case .atmospheres: return 101325.0 // 1 atm = 101325 Pa
         // Temperature
         case .kelvin, .celsius, .celsiusDelta: return 1.0
         case .fahrenheit, .rankine, .fahrenheitDelta: return 5.0 / 9.0
@@ -387,7 +387,9 @@ public enum AUnit: Codable, Sendable, Hashable, CaseIterable, Identifiable {
     ///   - value: The value to convert.
     ///   - unit: The target unit.
     /// - Returns: The converted value, or nil if conversion is not possible.
-    public func convert(value: Double, to unit: AUnit) -> Double? {
+    /// - 如果没有unit，则返回原值
+    public func convert(value: Double?, to unit: AUnit?) -> Double? {
+        guard let unit = unit, let value = value else { return value } // 如果没有要转换的unit，则返回原值
         guard self.unitType == unit.unitType else { return nil }
         // Temperature conversion
         if self.unitType == .temperature {
