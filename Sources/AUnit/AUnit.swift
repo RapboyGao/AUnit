@@ -380,6 +380,12 @@ public enum AUnit: Codable, Sendable, Hashable, CaseIterable, Identifiable {
     public var detailedIntroduction: String {
         return NSLocalizedString("\(self).detailedIntroduction", bundle: .module, comment: "")
     }
+    
+    /// The name in menu for the unit.
+    /// 单位在menu中显示的名称。
+    public var nameInMenu: String {
+        self.longName + " (" + self.symbol + ")"
+    }
 
     /// Converts a value from this unit to another unit.
     /// 将值从此单位转换为另一单位。
