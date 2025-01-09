@@ -111,4 +111,6 @@ public enum AUnitType: Codable, Sendable, Hashable, CaseIterable, Identifiable {
             return false
         }
     }
+
+    public static let casesUsedInVector: [AUnitType] = AUnitType.allCases.filter(\.canUseInVector)
 }
