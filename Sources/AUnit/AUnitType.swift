@@ -93,4 +93,22 @@ public enum AUnitType: Codable, Sendable, Hashable, CaseIterable, Identifiable {
             unit.unitType == self
         }
     }
+
+    public var isScaled: Bool {
+        switch self {
+        case .length, .speed, .pressure, .temperatureDifference, .mass, .volume, .acceleration, .power, .angle, .angularVelocity, .area, .concentration, .time, .electricChargeCapacity, .electricCurrent, .electricPotential, .electricResistance, .energy, .frequency, .data:
+            return true
+        case .temperature, .fuelEfficiency:
+            return false
+        }
+    }
+
+    public var canUseInVector: Bool {
+        switch self {
+        case .length, .speed, .acceleration:
+            return true
+        case .pressure, .temperature, .temperatureDifference, .mass, .volume, .power, .fuelEfficiency, .energy, .frequency, .data, .time, .angle, .angularVelocity, .area, .concentration, .electricChargeCapacity, .electricCurrent, .electricPotential, .electricResistance:
+            return false
+        }
+    }
 }
